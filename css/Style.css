@@ -71,6 +71,9 @@ body {
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   }
 }
+.portfolio__item {
+  text-align: center;
+}
 .portfolio__image {
   -webkit-transition: opacity 0.3s ease 0s;
   transition: opacity 0.3s ease 0s;
@@ -95,6 +98,8 @@ body {
   height: 100%;
   top: 0;
   left: 0;
+  -o-object-fit: cover;
+     object-fit: cover;
   -webkit-transition: -webkit-transform 0.3s ease 0s;
   transition: -webkit-transform 0.3s ease 0s;
   transition: transform 0.3s ease 0s;
@@ -106,5 +111,10 @@ body {
   font-weight: 700;
   color: rgba(0, 0, 0, 0.747);
   text-align: center;
-  display: block;
+  display: inline-block;
+}
+@media (any-hover: hover) {
+  .portfolio__name:hover {
+    text-decoration: underline;
+  }
 }
